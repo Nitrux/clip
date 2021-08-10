@@ -26,11 +26,11 @@ mk-build-deps -i -t "apt-get --yes" -r
 
 ### Clone repo.
 
-git clone --single-branch --branch v2.0 https://invent.kde.org/maui/buho.git
+git clone --single-branch --branch v2.0 https://invent.kde.org/maui/clip.git
 
-mv buho/* .
+mv clip/* .
 
-rm -rf buho android_files macos_files windows_files examples LICENSES README.md
+rm -rf clip android_files macos_files windows_files examples LICENSES README.md
 
 ### Build Deb
 
