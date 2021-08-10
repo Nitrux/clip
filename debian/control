@@ -20,6 +20,7 @@ Build-Depends: debhelper,
                qtbase5-dev (>= 5.5.0~),
                qtdeclarative5-dev,
                qtquickcontrols2-5-dev,
+               qtmultimedia5-dev,
                qtwebengine5-dev
 Standards-Version: 4.2.1
 Homepage: https://github.com/maui-project/clip
