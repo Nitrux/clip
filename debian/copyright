@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: buho
-Source: https://github.com/maui-project/buho
+Upstream-Name: clip
+Source: https://github.com/maui-project/clip
 
 Files: *
 Copyright: 2018, Camilo Higuita
