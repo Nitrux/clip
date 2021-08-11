@@ -19,10 +19,10 @@ Build-Depends: debhelper,
                qtquickcontrols2-5-dev,
                qtmultimedia5-dev
 Standards-Version: 4.2.1
-Homepage: https://github.com/maui-project/clip
-Vcs-Git: https://anongit.neon.kde.org/mobile/clip
-Vcs-Browser: https://packaging.neon.kde.org/mobile/clip.git
-Maintainer: Neon CI <neon@kde.org>
+Homepage: https://invent.kde.org/maui/booth/
+Vcs-Git: https://invent.kde.org/maui/booth/booth.git
+Vcs-Browser: https://invent.kde.org/maui/booth/
+Maintainer: Uri Herrera <uri_herrera@nxos.org>
 
 Package: clip
 Architecture: any
