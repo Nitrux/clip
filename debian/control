@@ -20,7 +20,7 @@ Build-Depends: debhelper,
                qtmultimedia5-dev
 Standards-Version: 4.2.1
 Homepage: https://invent.kde.org/maui/clip/
-Vcs-Git: https://invent.kde.org/maui/clip/clip.git
+Vcs-Git: https://invent.kde.org/maui/clip.git
 Vcs-Browser: https://invent.kde.org/maui/clip/
 Maintainer: Uri Herrera <uri_herrera@nxos.org>
 
