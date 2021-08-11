@@ -1,6 +1,6 @@
 clip (0.0.2+2.0.0+git) nitrux; urgency=medium
 
-  * Update package dependencies.
+  * Update package dependencies and description.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Wed, 10 Aug 2021 12:57:00 -0500
 

@@ -30,6 +30,6 @@ Depends: qml-module-org-kde-mauikit,
          qml-module-qt-labs-platform,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: Maui Note Taking App
- clip allows you to save links, write quick notes and organize pages as books.
- clip works on desktops, Android and Plasma Mobile.
+Description: Maui Video player.
+ Clip allows you to manage and play videos using MPV as a backend.
+ Clip works on desktops, Android and Plasma Mobile.
