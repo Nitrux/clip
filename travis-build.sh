@@ -20,9 +20,7 @@ apt -qq update
 
 ### Install Dependencies
 
-DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends libmpv1 libsmbclient samba-libs libtevent0 libwbclient0 libtalloc2
-
-DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends devscripts debhelper gettext lintian build-essential automake autotools-dev cmake extra-cmake-modules appstream qml-module-qtquick-controls2 qml-module-qtquick-shapes qml-module-qtgraphicaleffects mauikit-dev
+DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends devscripts debhelper gettext lintian build-essential automake autotools-dev cmake extra-cmake-modules appstream qml-module-qtquick-controls2 qml-module-qtquick-shapes qml-module-qtgraphicaleffects mauikit-dev libtevent0/focal
 
 mk-build-deps -i -t "apt-get --yes" -r
 
