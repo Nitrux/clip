@@ -26,7 +26,7 @@ mk-build-deps -i -t "apt-get --yes" -r
 
 ### Clone repo.
 
-git clone --single-branch --branch v2.0 https://invent.kde.org/maui/clip.git
+git clone --single-branch --branch v2.1 https://invent.kde.org/maui/clip.git
 
 mv clip/* .
 
