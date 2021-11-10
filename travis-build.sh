@@ -20,6 +20,8 @@ apt -qq update
 
 ### Install Dependencies
 
+apt-cache policy libkf5config-dev libkf5coreaddons-dev libkf5i18n-dev libkf5kio-dev libkf5notifications-dev libkf5service-dev libqt5svg5-dev libmauikitfilebrowsing-dev libmpv-dev qtdeclarative5-dev qtquickcontrols2-5-dev qtmultimedia5-dev
+
 DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends devscripts debhelper gettext lintian build-essential automake autotools-dev cmake extra-cmake-modules appstream qml-module-qtquick-controls2 qml-module-qtquick-shapes qml-module-qtgraphicaleffects mauikit-dev
 
 mk-build-deps -i -t "apt-get --yes" -r
