@@ -82,7 +82,7 @@ make
 ### DO NOT USE debuild, screw it
 
 >> description-pak printf "%s\n" \
-	'MauiKit Note Taking App.' \
+	'MauiKit Video Player.' \
 	'' \
 	'Clip allows you to manage and play videos using MPV as a backend.' \
 	'' \
