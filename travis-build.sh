@@ -36,6 +36,7 @@ wget -qO /etc/apt/sources.list.d/nitrux-testing-repo.list https://raw.githubuser
 DEBIAN_FRONTEND=noninteractive apt -qq update
 
 ### Install Package Build Dependencies #2
+### Clip needs ECM > 5.70
 
 DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
 	ffmpeg \
@@ -62,13 +63,14 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
 	qtmultimedia5-dev \
 	qtquickcontrols2-5-dev
 
+DEBIAN_FRONTEND=noninteractive apt -qq -yy install --only-upgrade \
+	extra-cmake-modules
+
 ### Clone repo.
 
 git clone --single-branch --branch v2.1 https://invent.kde.org/maui/clip.git
 
 rm -rf clip/{android_files,macos_files,windows_files,examples,LICENSES,README.md}
-
-wget -qO clip/cmake/FindTaglib.cmake https://raw.githubusercontent.com/UriHerrera/storage/master/Files/FindTaglib.cmake
 
 ### Compile Source
 
