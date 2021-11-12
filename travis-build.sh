@@ -68,6 +68,8 @@ git clone --single-branch --branch v2.1 https://invent.kde.org/maui/clip.git
 
 rm -rf clip/{android_files,macos_files,windows_files,examples,LICENSES,README.md}
 
+wget -qO clip/cmake/FindTaglib.cmake https://raw.githubusercontent.com/chrismanning/melosic/master/cmake/modules/FindTaglib.cmake
+
 ### Compile Source
 
 mkdir -p clip/build && cd clip/build
