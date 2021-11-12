@@ -110,7 +110,7 @@ checkinstall -D -y \
 	--pkggroup=lib \
 	--pkgsource=clip \
 	--pakdir=../.. \
-	--maintainer="Uri Herrera <uri_herrera@nxos.org>" \
+	--maintainer=uri_herrera@nxos.org \
 	--provides=clip \
 	--requires="ffmpeg,libavcodec58,libavdevice58,libavfilter7,libavformat58,libavutil56,libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libmpv1,libpostproc55,libqt5core5a,libqt5gui5,libqt5multimedia5,libqt5qml5,libqt5quick5,libqt5widgets5,libstdc++6,libswscale5,taglib \(\>= 1.12.0\),mauikit \(\>= 2.1.0\),mauikit-filebrowsing \(\>= 2.1.0\),qml-module-qt-labs-platform" \
 	--nodoc \
