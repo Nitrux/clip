@@ -38,20 +38,29 @@ DEBIAN_FRONTEND=noninteractive apt -qq update
 ### Install Package Build Dependencies #2
 
 DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
+	ffmpeg \
+	libavcodec-dev \
+	libavdevice-dev \
+	libavfilter-dev \
+	libavformat-dev \
+	libavutil-dev \
 	libkf5config-dev \
 	libkf5coreaddons-dev \
 	libkf5i18n-dev \
 	libkf5kio-dev \
 	libkf5notifications-dev \
 	libkf5service-dev \
-	libqt5svg5-dev \
 	libmpv-dev \
+	libpostproc-dev \
+	libqt5svg5-dev \
+	libswscale-dev \
+	libtag1-dev \
 	mauikit \
 	mauikit-filebrowsing \
 	qtbase5-dev \
 	qtdeclarative5-dev \
-	qtquickcontrols2-5-dev \
-	qtmultimedia5-dev
+	qtmultimedia5-dev \
+	qtquickcontrols2-5-dev
 
 ### Clone repo.
 
@@ -103,7 +112,7 @@ checkinstall -D -y \
 	--pakdir=../.. \
 	--maintainer="Uri Herrera <uri_herrera@nxos.org>" \
 	--provides=clip \
-	--requires="libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libmpv1,libqt5core5a,libqt5gui5,libqt5multimedia5,libqt5qml5,libqt5quick5,libqt5widgets5,libstdc++6,mauikit \(\>= 2.1.0\),mauikit-filebrowsing \(\>= 2.1.0\),qml-module-qt-labs-platform" \
+	--requires="ffmpeg,libavcodec58,libavdevice58,libavfilter7,libavformat58,libavutil56,libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libmpv1,libpostproc55,libqt5core5a,libqt5gui5,libqt5multimedia5,libqt5qml5,libqt5quick5,libqt5widgets5,libstdc++6,libswscale5,libtag1v5,mauikit \(\>= 2.1.0\),mauikit-filebrowsing \(\>= 2.1.0\),qml-module-qt-labs-platform" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
