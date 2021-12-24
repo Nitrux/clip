@@ -56,8 +56,8 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
 	libqt5svg5-dev \
 	libswscale-dev \
 	taglib \
-	mauikit \
-	mauikit-filebrowsing \
+	mauikit-git \
+	mauikit-filebrowsing-git \
 	qtbase5-dev \
 	qtdeclarative5-dev \
 	qtmultimedia5-dev \
