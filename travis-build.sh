@@ -68,7 +68,7 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --only-upgrade \
 
 ### Clone repo.
 
-git clone --single-branch --branch master https://invent.kde.org/maui/clip.git
+git clone --single-branch --branch v2.1 https://invent.kde.org/maui/clip.git
 
 rm -rf clip/{android_files,macos_files,windows_files,examples,LICENSES,README.md}
 
