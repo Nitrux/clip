@@ -77,5 +77,4 @@ $APT_COMMAND install -qy --no-install-recommends \
     qtwayland5 \
     qtwayland5-dev-tools \
     qtwayland5-private-dev \
-    taglib \
     xxd
