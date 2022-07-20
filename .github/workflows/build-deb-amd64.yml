@@ -52,7 +52,7 @@ jobs:
         run: ./scripts/build-deb.sh
         env:
           PACKAGE_VERSION: ${{ inputs.packageVersion }}
-          BONSAI_BRANCH: ${{ inputs.clipBranch }}
+          CLIP_BRANCH: ${{ inputs.clipBranch }}
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
