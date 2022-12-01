@@ -4,22 +4,19 @@ set -x
 
 ### Update sources
 
-wget -qO /etc/apt/sources.list.d/nitrux-main-compat-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.nitrux
+wget -qO /etc/apt/sources.list.d/nitrux-main-compat-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources/nitrux-repo.list
 
-wget -qO /etc/apt/sources.list.d/nitrux-testing-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.nitrux.testing
-
-DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys \
-	55751E5D > /dev/null
+wget -qO /etc/apt/sources.list.d/nitrux-testing-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources/nitrux-testing-repo.list
 
 curl -L https://packagecloud.io/nitrux/repo/gpgkey | apt-key add -;
 curl -L https://packagecloud.io/nitrux/compat/gpgkey | apt-key add -;
 curl -L https://packagecloud.io/nitrux/testing/gpgkey | apt-key add -;
 
-DEBIAN_FRONTEND=noninteractive apt -qq update
+apt -qq update
 
 ### Install Package Build Dependencies #2
 
-DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
+apt -qq -yy install --no-install-recommends \
 	mauikit-git \
 	mauikit-filebrowsing-git \
 	taglib
@@ -71,7 +68,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=probal31@gmail.com \
 	--provides=clip \
-	--requires="ffmpeg,libavcodec58,libavdevice58,libavfilter7,libavformat58,libavutil56,libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libmpv1,libpostproc55,libqt5core5a,libqt5gui5,libqt5multimedia5,libqt5qml5,libqt5quick5,libqt5widgets5,libstdc++6,libswscale5,taglib \(\>= 1.12.0\),mauikit-git \(\>= 2.2.0+git\),mauikit-filebrowsing-git \(\>= 2.2.0+git\),qml-module-qt-labs-platform" \
+	--requires="ffmpeg,libavcodec58,libavdevice58,libavfilter7,libavformat58,libavutil56,libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libmpv1,libpostproc55,libqt5core5a,libqt5gui5,libqt5multimedia5,libqt5qml5,libqt5quick5,libqt5widgets5,libstdc++6,libswscale5,taglib \(\>= 1.12.0\),mauikit-git \(\>= 2.2.1+git\),mauikit-filebrowsing-git \(\>= 2.2.1+git\),qml-module-qt-labs-platform" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
