@@ -18,8 +18,7 @@ apt -qq update
 
 apt -qq -yy install --no-install-recommends \
 	mauikit-git \
-	mauikit-filebrowsing-git \
-	taglib
+	mauikit-filebrowsing-git
 
 ### Download Source
 
