@@ -37,6 +37,7 @@ $APT_COMMAND install -qy --no-install-recommends \
     libpostproc-dev \
     libqt5svg5-dev \
     libswscale-dev \
+    libtag1-dev \
     libwayland-dev \
     lintian \
     qtbase5-dev \
