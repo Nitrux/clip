@@ -69,7 +69,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=probal31@gmail.com \
 	--provides=clip \
-	--requires="ffmpeg,libavcodec60,libavdevice60,libavfilter9,libavformat60,libavutil58,libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libmpv1,libpostproc55,libqt5core5a,libqt5gui5,libqt5multimedia5,libqt5qml5,libqt5quick5,libqt5widgets5,libstdc++6,libswscale5,libtag1v5,mauikit-filebrowsing-git \(\>= 3.1.0+git\),mauikit-git \(\>= 3.1.0+git\),qml-module-qt-labs-platform" \
+	--requires="ffmpeg,libavcodec60,libavdevice60,libavfilter9,libavformat60,libavutil58,libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libmpv2,libpostproc57,libqt5core5a,libqt5gui5,libqt5multimedia5,libqt5qml5,libqt5quick5,libqt5widgets5,libstdc++6,libswscale7,libtag1v5,mauikit-filebrowsing-git \(\>= 3.1.0+git\),mauikit-git \(\>= 3.1.0+git\),qml-module-qt-labs-platform" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
