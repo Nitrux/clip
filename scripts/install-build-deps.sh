@@ -42,6 +42,7 @@ BUILD_DEPS='
     qt6-base-dev
     qt6-declarative-dev
     qt6-multimedia-dev
+    libkf6dbusaddons-dev
 '
 
 $APT_COMMAND update -q
