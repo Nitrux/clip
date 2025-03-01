@@ -5,7 +5,7 @@
 
 ![](https://nxos.org/wp-content/uploads/2025/02/Screenshot_20250228_212736.png)
 
-Easy-to-use note-taking application with “tags” support.
+Movie player using MPV as backend.
 
 # Issues
 If you find problems with the contents of this repository please create an issue.
