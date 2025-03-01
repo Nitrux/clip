@@ -69,7 +69,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=probal31@gmail.com \
 	--provides=clip \
-	--requires="ffmpeg,libavcodec61,libavdevice61,libavfilter10,libavformat61,libavutil59,libc6,libkf6dbusaddons6,libkf6kiofilewidgets6,libmpv2,libpostproc58,libqt6multimedia6,libqt6multimediawidgets6,libqt6spatialaudio6,libswscale8,libtag2,mauikit-filebrowsing-git \(\>= 4.0.1\),mauikit-git \(\>= 4.0.1\),qml6-module-qtcore,qml6-module-qtmultimedia,qml6-module-qtquick-effects,qml6-module-qtquick3d-spatialaudio" \
+	--requires="ffmpeg,libavcodec61,libavdevice61,libavfilter10,libavformat61,libavutil59,libc6,libkf6dbusaddons6,libkf6kiofilewidgets6,libmpv2,libpostproc58,libqt6multimedia6,libqt6multimediawidgets6,libqt6spatialaudio6,libswscale8,libtag2,mauikit-filebrowsing-git \(\>= 4.0.1\),mauikit-git \(\>= 4.0.1\),qml6-module-qt-labs-settings,qml6-module-qt5compat-graphicaleffects,qml6-module-qtcore,qml6-module-qtmultimedia,qml6-module-qtquick-effects,qml6-module-qtquick3d-spatialaudio" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
