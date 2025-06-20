@@ -37,8 +37,6 @@ git clone --depth 1 --branch "$CLIP_BRANCH "https://invent.kde.org/maui/clip.git
 
 mkdir -p build && cd build
 
-HOST_MULTIARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
-
 cmake \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DENABLE_BSYMBOLICFUNCTIONS=OFF \
@@ -72,7 +70,7 @@ make install
 checkinstall -D -y \
 	--install=no \
 	--fstrans=yes \
-	--pkgname=clipCLIP \
+	--pkgname=clip \
 	--pkgversion="$PACKAGE_VERSION" \
 	--pkgarch="$(dpkg --print-architecture)" \
 	--pkgrelease="1" \
@@ -82,7 +80,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=probal31@gmail.com \
 	--provides=clip \
-	--requires="ffmpeg,libavcodec61,libavdevice61,libavfilter10,libavformat61,libavutil59,libc6,libkf6dbusaddons6,libkf6kiofilewidgets6,libmpv2,libpostproc58,libqt6multimedia6,libqt6multimediawidgets6,libqt6spatialaudio6,libswscale8,libtag2,mauikit-filebrowsingCLIP \(\>= 4.0.2\),mauikitCLIP \(\>= 4.0.2\),qml6-module-qt-labs-settings,qml6-module-qt5compat-graphicaleffects,qml6-module-qtcore,qml6-module-qtmultimedia,qml6-module-qtquick-effects,qml6-module-qtquick3d-spatialaudio" \
+	--requires="ffmpeg,libavcodec61,libavdevice61,libavfilter10,libavformat61,libavutil59,libc6,libkf6dbusaddons6,libkf6kiofilewidgets6,libmpv2,libpostproc58,libqt6multimedia6,libqt6multimediawidgets6,libqt6spatialaudio6,libswscale8,libtag2,mauikit-filebrowsing \(\>= 4.0.2\),mauikit \(\>= 4.0.2\),qml6-module-qt-labs-settings,qml6-module-qt5compat-graphicaleffects,qml6-module-qtcore,qml6-module-qtmultimedia,qml6-module-qtquick-effects,qml6-module-qtquick3d-spatialaudio" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
