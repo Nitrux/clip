@@ -30,7 +30,7 @@ set -e
 
 # -- Download Source
 
-git clone --depth 1 --branch "$CLIP_BRANCH "https://invent.kde.org/maui/clip.git
+git clone --depth 1 --branch "$CLIP_BRANCH" https://invent.kde.org/maui/clip.git
 
 
 # -- Compile Source
