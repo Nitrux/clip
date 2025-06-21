@@ -37,6 +37,8 @@ git clone --depth 1 --branch "$CLIP_BRANCH" https://invent.kde.org/maui/clip.git
 
 mkdir -p build && cd build
 
+HOST_MULTIARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 cmake \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DENABLE_BSYMBOLICFUNCTIONS=OFF \
