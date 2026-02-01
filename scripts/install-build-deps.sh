@@ -48,6 +48,7 @@ $APT_COMMAND install -y - --no-install-recommends \
     libkf6kio-dev \
     libkf6notifications-dev \
     libmpv-dev \
+    libpostproc-dev \
     libswscale-dev \
     libtag1-dev \
     lintian \
