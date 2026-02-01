@@ -23,7 +23,7 @@ jobs:
   build-amd64:
     runs-on: ubuntu-24.04
     container:
-      image: debian:stable
+      image: debian:unstable
       env:
         DEBIAN_FRONTEND: noninteractive
         PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
@@ -43,12 +43,12 @@ jobs:
         with:
           name: deb-package-amd64
           path: ./build/*.deb
-      - run: package_cloud push nitrux/${{ inputs.packageCloudRepo }}/debian/forky ./build/*.deb
+      - run: package_cloud push nitrux/${{ inputs.packageCloudRepo }}/debian/duke ./build/*.deb
 
   build-arm64:
     runs-on: ubuntu-24.04-arm
     container:
-      image: arm64v8/debian:stable
+      image: arm64v8/debian:unstable
       env:
         DEBIAN_FRONTEND: noninteractive
         PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
@@ -69,4 +69,4 @@ jobs:
         with:
           name: deb-package-arm64
           path: ./build/*.deb
-      - run: package_cloud push nitrux/${{ inputs.packageCloudRepo }}/debian/forky ./build/*.deb
+      - run: package_cloud push nitrux/${{ inputs.packageCloudRepo }}/debian/duke ./build/*.deb
