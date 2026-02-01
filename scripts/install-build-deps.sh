@@ -52,8 +52,8 @@ $APT_COMMAND install -y - --no-install-recommends \
     libswscale-dev \
     libtag1-dev \
     lintian \
-    qml6-module-qtgraphicaleffects \
-    qml6-module-qtquick-controls2 \
+    qml6-module-qt5compat-graphicaleffects \
+    qml6-module-qtquick-controls \
     qml6-module-qtquick-shapes \
     qt6-base-dev \
     qt6-declarative-dev \
