@@ -32,29 +32,20 @@ $APT_COMMAND install -y - --no-install-recommends \
     devscripts \
     equivs \
     extra-cmake-modules \
-    ffmpeg \
     gettext \
     git \
     gnupg2 \
     libavcodec-dev \
-    libavdevice-dev \
     libavfilter-dev \
     libavformat-dev \
     libavutil-dev \
-    libkf6config-dev \
     libkf6coreaddons-dev \
-    libkf6dbusaddons-dev \
     libkf6i18n-dev \
-    libkf6kio-dev \
-    libkf6notifications-dev \
     libmpv-dev \
-    libpostproc-dev \
     libswscale-dev \
     libtag1-dev \
     lintian \
-    qml6-module-qt5compat-graphicaleffects \
-    qml6-module-qtquick-controls \
-    qml6-module-qtquick-shapes \
+    pkg-config \
     qt6-base-dev \
     qt6-declarative-dev \
     qt6-multimedia-dev
