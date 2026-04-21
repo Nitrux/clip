@@ -41,6 +41,8 @@ $APT_COMMAND install -y - --no-install-recommends \
     libavutil-dev \
     libkf6coreaddons-dev \
     libkf6i18n-dev \
+    libkf6kio-dev \
+    libkf6solid-dev \
     libmpv-dev \
     libswscale-dev \
     libtag1-dev \
