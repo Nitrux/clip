@@ -63,7 +63,7 @@ checkinstall -D -y \
 	--pakdir=. \
 	--maintainer=probal31@gmail.com \
 	--provides=clip \
-	--requires="libc6,libmpv2,libqt6multimedia6,mauikit-filebrowsing \(\>= 4.0.2\),mauikit \(\>= 4.0.2\),qml6-module-qtcore,qml6-module-qtmultimedia" \
+	--requires="libc6,libmpv2,libqt6multimedia6,mauikit-filebrowsing \(\>= 4.0.3\),mauikit \(\>= 4.0.3\),qml6-module-qtcore,qml6-module-qtmultimedia" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \
