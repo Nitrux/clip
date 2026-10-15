@@ -26,12 +26,12 @@ $APT_COMMAND install -y --no-install-recommends \
     automake \
     autotools-dev \
     build-essential \
-    checkinstall \
-    cmake \
+    meson \
+    ninja-build \
+    pkg-config \
     curl \
     devscripts \
     equivs \
-    extra-cmake-modules \
     gettext \
     git \
     gnupg2 \
@@ -47,8 +47,8 @@ $APT_COMMAND install -y --no-install-recommends \
     libswscale-dev \
     libtag1-dev \
     lintian \
-    pkg-config \
     qt6-base-dev \
+    qt6-base-dev-tools \
     qt6-declarative-dev \
     qt6-multimedia-dev
 
