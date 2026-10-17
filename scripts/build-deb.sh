@@ -12,7 +12,7 @@ set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_root"
-PACKAGE_VERSION="${PACKAGE_VERSION:-0.0.1}"
+PACKAGE_VERSION="${PACKAGE_VERSION:?PACKAGE_VERSION must be supplied by CI}"
 TARGET_ARCH="${TARGET_ARCH:-$(dpkg --print-architecture)}"
 
 # -- Download Source
@@ -22,25 +22,29 @@ source_dir="$repo_root/maui-clip"
 
 # -- Configure build.
 
+# MauiKit software must be built with CMake and ECM; never use Meson.
 build_dir="$repo_root/build"
-meson_dir="$build_dir/meson"
+cmake_dir="$build_dir/cmake"
 stage_dir="$build_dir/package"
-rm -rf "$meson_dir" "$stage_dir"
+rm -rf "$cmake_dir" "$stage_dir"
 mkdir -p "$build_dir"
 
-meson_args=(--prefix=/usr --buildtype=release)
+cmake_args=(
+    -DCMAKE_INSTALL_PREFIX=/usr
+    -DCMAKE_BUILD_TYPE=Release
+)
 if [ "$(dpkg-architecture -qDEB_HOST_ARCH)" = "amd64" ]; then
-    meson_args+=("-Dcpp_args=-march=x86-64-v3")
+    cmake_args+=("-DCMAKE_CXX_FLAGS=-march=x86-64-v3")
 fi
 
 # -- Compile Source
 
-meson setup "$meson_dir" "$source_dir" "${meson_args[@]}"
-meson compile -C "$meson_dir" -j "$(nproc)"
+cmake -S "$source_dir" -B "$cmake_dir" "${cmake_args[@]}"
+cmake --build "$cmake_dir" --parallel "$(nproc)"
 
 # -- Install source to DESTDIR.
 
-DESTDIR="$stage_dir" meson install -C "$meson_dir"
+DESTDIR="$stage_dir" cmake --install "$cmake_dir"
 
 # -- Create DEBIAN control file.
 
@@ -53,7 +57,7 @@ Priority: optional
 Architecture: ${TARGET_ARCH}
 Maintainer: uri_herrera@nxos.org
 Provides: clip
-Depends: libc6,libmpv2,libqt6multimedia6,mauikit-filebrowsing (>= 4.0.4),mauikit (>= 4.0.4),qml6-module-qtcore,qml6-module-qtmultimedia
+Depends: qml6-module-qtquick-controls,qml6-module-qtquick-effects,qml6-module-qtquick-layouts,libqt6core6t64,libqt6network6,libqt6qml6,libqt6quick6,libc6,libmpv2,libqt6multimedia6,mauikit-filebrowsing (>= 4.0.4),mauikit (>= 4.0.4),qml6-module-qtcore,qml6-module-qtmultimedia
 Description: clip
  clip
 CONTROL
