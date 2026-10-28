@@ -57,7 +57,7 @@ Priority: optional
 Architecture: ${TARGET_ARCH}
 Maintainer: uri_herrera@nxos.org
 Provides: clip
-Depends: qml6-module-qtquick-controls,qml6-module-qtquick-effects,qml6-module-qtquick-layouts,libqt6core6t64,libqt6network6,libqt6qml6,libqt6quick6,libc6,libmpv2,libqt6multimedia6,mauikit-filebrowsing (>= 4.0.4),mauikit (>= 4.0.4),qml6-module-qtcore,qml6-module-qtmultimedia
+Depends: qml6-module-qtquick-controls,qml6-module-qtquick-effects,qml6-module-qtquick-layouts,libqt6core6t64,libqt6network6,libqt6qml6,libqt6quick6,libc6,libmpv2,libqt6multimedia6,mauikit-filebrowsing (>= 4.0.5),mauikit (>= 4.0.5),qml6-module-qtcore,qml6-module-qtmultimedia
 Description: clip
  clip
 CONTROL
